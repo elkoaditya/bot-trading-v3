@@ -28,13 +28,6 @@ COPY . .
 # Create directories for persistent data
 RUN mkdir -p /app/data /app/logs /app/config
 
-# Create non-root user for security
-RUN useradd --create-home --shell /bin/bash botuser \
-    && chown -R botuser:botuser /app
-
-# Switch to non-root user
-USER botuser
-
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD python -c "import sys; sys.exit(0)"
