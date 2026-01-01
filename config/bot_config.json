@@ -1,0 +1,1290 @@
+{
+  "meta": {
+    "generated_at": "2026-01-01T09:36:06.856181",
+    "version": "1.0.0",
+    "description": "Auto-generated bot configuration from backtesting"
+  },
+  "global_settings": {
+    "initial_capital": 10000,
+    "trading_fee": 0.001,
+    "position_size": 0.1,
+    "leverage": 10,
+    "timeframe": "5m",
+    "category": "linear",
+    "exchange": "bybit"
+  },
+  "coins": {
+    "BTC": {
+      "symbol": "BTCUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "multi",
+        "mode": "majority",
+        "strategies": [
+          {
+            "name": "rsi",
+            "params": {
+              "period": 14,
+              "oversold": 30,
+              "overbought": 70
+            }
+          },
+          {
+            "name": "macd",
+            "params": {
+              "fast_period": 12,
+              "slow_period": 26,
+              "signal_period": 9
+            }
+          }
+        ]
+      },
+      "performance": {
+        "win_rate": 50.0,
+        "total_pnl": 316.82,
+        "total_trades": 2,
+        "winning_trades": 1,
+        "losing_trades": 1,
+        "avg_win": 320.17,
+        "avg_loss": -3.35,
+        "profit_factor": 95.62,
+        "max_drawdown_pct": 1.0,
+        "sharpe_ratio": 9.94,
+        "total_return_pct": 3.07
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 0.03,
+        "take_profit_pct": 3.2,
+        "max_daily_trades": 2,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_above",
+              "params": {
+                "period": 14,
+                "level": 30
+              },
+              "signal": "buy",
+              "description": "RSI(14) crosses above 30"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "buy",
+              "description": "MACD line crosses above Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_below",
+              "params": {
+                "period": 14,
+                "level": 70
+              },
+              "signal": "sell",
+              "description": "RSI(14) crosses below 70"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "sell",
+              "description": "MACD line crosses below Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "alternative_strategies": [
+        {
+          "name": "Bollinger Bands",
+          "win_rate": 71.43,
+          "pnl": 10.09,
+          "profit_factor": 1.03
+        }
+      ]
+    },
+    "ETH": {
+      "symbol": "ETHUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "multi",
+        "mode": "majority",
+        "strategies": [
+          {
+            "name": "macd",
+            "params": {
+              "fast_period": 12,
+              "slow_period": 26,
+              "signal_period": 9
+            }
+          },
+          {
+            "name": "bollinger",
+            "params": {
+              "period": 20,
+              "std_dev": 2
+            }
+          }
+        ]
+      },
+      "performance": {
+        "win_rate": 100.0,
+        "total_pnl": 154.71,
+        "total_trades": 1,
+        "winning_trades": 1,
+        "losing_trades": 0,
+        "avg_win": 154.71,
+        "avg_loss": 0.0,
+        "profit_factor": 154.71,
+        "max_drawdown_pct": 4.45,
+        "sharpe_ratio": 2.44,
+        "total_return_pct": 1.55
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 2.0,
+        "take_profit_pct": 1.55,
+        "max_daily_trades": 1,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "MACD",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "buy",
+              "description": "MACD line crosses above Signal line"
+            },
+            {
+              "indicator": "Bollinger Bands",
+              "condition": "price_bounces_from_lower",
+              "params": {
+                "period": 20,
+                "std_dev": 2
+              },
+              "signal": "buy",
+              "description": "Price bounces from lower Bollinger Band"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "MACD",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "sell",
+              "description": "MACD line crosses below Signal line"
+            },
+            {
+              "indicator": "Bollinger Bands",
+              "condition": "price_pulls_from_upper",
+              "params": {
+                "period": 20,
+                "std_dev": 2
+              },
+              "signal": "sell",
+              "description": "Price pulls back from upper Bollinger Band"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "alternative_strategies": [
+        {
+          "name": "RSI",
+          "win_rate": 87.5,
+          "pnl": 192.86,
+          "profit_factor": 2.76
+        },
+        {
+          "name": "Bollinger Bands",
+          "win_rate": 70.83,
+          "pnl": 142.81,
+          "profit_factor": 1.34
+        }
+      ]
+    },
+    "SOL": {
+      "symbol": "SOLUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "multi",
+        "mode": "majority",
+        "strategies": [
+          {
+            "name": "ema_crossover",
+            "params": {
+              "fast_period": 9,
+              "slow_period": 21
+            }
+          },
+          {
+            "name": "rsi",
+            "params": {
+              "period": 14,
+              "oversold": 30,
+              "overbought": 70
+            }
+          },
+          {
+            "name": "bollinger",
+            "params": {
+              "period": 20,
+              "std_dev": 2
+            }
+          }
+        ]
+      },
+      "performance": {
+        "win_rate": 100.0,
+        "total_pnl": 230.38,
+        "total_trades": 2,
+        "winning_trades": 2,
+        "losing_trades": 0,
+        "avg_win": 115.19,
+        "avg_loss": 0.0,
+        "profit_factor": 230.38,
+        "max_drawdown_pct": 5.15,
+        "sharpe_ratio": 3.3,
+        "total_return_pct": 2.1
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 2.0,
+        "take_profit_pct": 1.15,
+        "max_daily_trades": 2,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "EMA",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 9,
+                "slow_period": 21
+              },
+              "signal": "buy",
+              "description": "EMA(9) crosses above EMA(21)"
+            },
+            {
+              "indicator": "RSI",
+              "condition": "crosses_above",
+              "params": {
+                "period": 14,
+                "level": 30
+              },
+              "signal": "buy",
+              "description": "RSI(14) crosses above 30"
+            },
+            {
+              "indicator": "Bollinger Bands",
+              "condition": "price_bounces_from_lower",
+              "params": {
+                "period": 20,
+                "std_dev": 2
+              },
+              "signal": "buy",
+              "description": "Price bounces from lower Bollinger Band"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "EMA",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 9,
+                "slow_period": 21
+              },
+              "signal": "sell",
+              "description": "EMA(9) crosses below EMA(21)"
+            },
+            {
+              "indicator": "RSI",
+              "condition": "crosses_below",
+              "params": {
+                "period": 14,
+                "level": 70
+              },
+              "signal": "sell",
+              "description": "RSI(14) crosses below 70"
+            },
+            {
+              "indicator": "Bollinger Bands",
+              "condition": "price_pulls_from_upper",
+              "params": {
+                "period": 20,
+                "std_dev": 2
+              },
+              "signal": "sell",
+              "description": "Price pulls back from upper Bollinger Band"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "alternative_strategies": [
+        {
+          "name": "RSI",
+          "win_rate": 85.71,
+          "pnl": 324.24,
+          "profit_factor": 2.61
+        },
+        {
+          "name": "Bollinger Bands",
+          "win_rate": 61.9,
+          "pnl": 178.18,
+          "profit_factor": 1.37
+        }
+      ]
+    },
+    "XRP": {
+      "symbol": "XRPUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "multi",
+        "mode": "majority",
+        "strategies": [
+          {
+            "name": "rsi",
+            "params": {
+              "period": 14,
+              "oversold": 30,
+              "overbought": 70
+            }
+          },
+          {
+            "name": "macd",
+            "params": {
+              "fast_period": 12,
+              "slow_period": 26,
+              "signal_period": 9
+            }
+          }
+        ]
+      },
+      "performance": {
+        "win_rate": 50.0,
+        "total_pnl": 321.98,
+        "total_trades": 2,
+        "winning_trades": 1,
+        "losing_trades": 1,
+        "avg_win": 410.82,
+        "avg_loss": -88.84,
+        "profit_factor": 4.62,
+        "max_drawdown_pct": 2.77,
+        "sharpe_ratio": 5.63,
+        "total_return_pct": 3.12
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 0.89,
+        "take_profit_pct": 4.11,
+        "max_daily_trades": 2,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_above",
+              "params": {
+                "period": 14,
+                "level": 30
+              },
+              "signal": "buy",
+              "description": "RSI(14) crosses above 30"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "buy",
+              "description": "MACD line crosses above Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_below",
+              "params": {
+                "period": 14,
+                "level": 70
+              },
+              "signal": "sell",
+              "description": "RSI(14) crosses below 70"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "sell",
+              "description": "MACD line crosses below Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "alternative_strategies": []
+    },
+    "DOGE": {
+      "symbol": "DOGEUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "multi",
+        "mode": "majority",
+        "strategies": [
+          {
+            "name": "rsi",
+            "params": {
+              "period": 14,
+              "oversold": 30,
+              "overbought": 70
+            }
+          },
+          {
+            "name": "macd",
+            "params": {
+              "fast_period": 12,
+              "slow_period": 26,
+              "signal_period": 9
+            }
+          },
+          {
+            "name": "bollinger",
+            "params": {
+              "period": 20,
+              "std_dev": 2
+            }
+          }
+        ]
+      },
+      "performance": {
+        "win_rate": 75.0,
+        "total_pnl": 299.36,
+        "total_trades": 4,
+        "winning_trades": 3,
+        "losing_trades": 1,
+        "avg_win": 112.07,
+        "avg_loss": -36.86,
+        "profit_factor": 9.12,
+        "max_drawdown_pct": 2.8,
+        "sharpe_ratio": 4.51,
+        "total_return_pct": 2.59
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 0.37,
+        "take_profit_pct": 1.12,
+        "max_daily_trades": 4,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_above",
+              "params": {
+                "period": 14,
+                "level": 30
+              },
+              "signal": "buy",
+              "description": "RSI(14) crosses above 30"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "buy",
+              "description": "MACD line crosses above Signal line"
+            },
+            {
+              "indicator": "Bollinger Bands",
+              "condition": "price_bounces_from_lower",
+              "params": {
+                "period": 20,
+                "std_dev": 2
+              },
+              "signal": "buy",
+              "description": "Price bounces from lower Bollinger Band"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_below",
+              "params": {
+                "period": 14,
+                "level": 70
+              },
+              "signal": "sell",
+              "description": "RSI(14) crosses below 70"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "sell",
+              "description": "MACD line crosses below Signal line"
+            },
+            {
+              "indicator": "Bollinger Bands",
+              "condition": "price_pulls_from_upper",
+              "params": {
+                "period": 20,
+                "std_dev": 2
+              },
+              "signal": "sell",
+              "description": "Price pulls back from upper Bollinger Band"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "alternative_strategies": []
+    },
+    "BNB": {
+      "symbol": "BNBUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "multi",
+        "mode": "majority",
+        "strategies": [
+          {
+            "name": "ema_crossover",
+            "params": {
+              "fast_period": 9,
+              "slow_period": 21
+            }
+          },
+          {
+            "name": "rsi",
+            "params": {
+              "period": 14,
+              "oversold": 30,
+              "overbought": 70
+            }
+          },
+          {
+            "name": "macd",
+            "params": {
+              "fast_period": 12,
+              "slow_period": 26,
+              "signal_period": 9
+            }
+          }
+        ]
+      },
+      "performance": {
+        "win_rate": 66.67,
+        "total_pnl": 413.92,
+        "total_trades": 3,
+        "winning_trades": 2,
+        "losing_trades": 1,
+        "avg_win": 222.89,
+        "avg_loss": -31.87,
+        "profit_factor": 13.99,
+        "max_drawdown_pct": 1.85,
+        "sharpe_ratio": 10.67,
+        "total_return_pct": 3.94
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 0.32,
+        "take_profit_pct": 2.23,
+        "max_daily_trades": 3,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "EMA",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 9,
+                "slow_period": 21
+              },
+              "signal": "buy",
+              "description": "EMA(9) crosses above EMA(21)"
+            },
+            {
+              "indicator": "RSI",
+              "condition": "crosses_above",
+              "params": {
+                "period": 14,
+                "level": 30
+              },
+              "signal": "buy",
+              "description": "RSI(14) crosses above 30"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "buy",
+              "description": "MACD line crosses above Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "EMA",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 9,
+                "slow_period": 21
+              },
+              "signal": "sell",
+              "description": "EMA(9) crosses below EMA(21)"
+            },
+            {
+              "indicator": "RSI",
+              "condition": "crosses_below",
+              "params": {
+                "period": 14,
+                "level": 70
+              },
+              "signal": "sell",
+              "description": "RSI(14) crosses below 70"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "sell",
+              "description": "MACD line crosses below Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "alternative_strategies": [
+        {
+          "name": "RSI",
+          "win_rate": 85.71,
+          "pnl": 216.49,
+          "profit_factor": 3.63
+        },
+        {
+          "name": "Bollinger Bands",
+          "win_rate": 83.33,
+          "pnl": 338.47,
+          "profit_factor": 2.64
+        }
+      ]
+    },
+    "ADA": {
+      "symbol": "ADAUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "multi",
+        "mode": "majority",
+        "strategies": [
+          {
+            "name": "ema_crossover",
+            "params": {
+              "fast_period": 9,
+              "slow_period": 21
+            }
+          },
+          {
+            "name": "macd",
+            "params": {
+              "fast_period": 12,
+              "slow_period": 26,
+              "signal_period": 9
+            }
+          }
+        ]
+      },
+      "performance": {
+        "win_rate": 50.0,
+        "total_pnl": 579.27,
+        "total_trades": 4,
+        "winning_trades": 2,
+        "losing_trades": 2,
+        "avg_win": 348.39,
+        "avg_loss": -58.75,
+        "profit_factor": 5.93,
+        "max_drawdown_pct": 3.06,
+        "sharpe_ratio": 7.45,
+        "total_return_pct": 5.38
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 0.59,
+        "take_profit_pct": 3.48,
+        "max_daily_trades": 4,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "EMA",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 9,
+                "slow_period": 21
+              },
+              "signal": "buy",
+              "description": "EMA(9) crosses above EMA(21)"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "buy",
+              "description": "MACD line crosses above Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "EMA",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 9,
+                "slow_period": 21
+              },
+              "signal": "sell",
+              "description": "EMA(9) crosses below EMA(21)"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "sell",
+              "description": "MACD line crosses below Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "alternative_strategies": []
+    },
+    "AVAX": {
+      "symbol": "AVAXUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "single",
+        "name": "ema_crossover",
+        "params": {
+          "fast_period": 9,
+          "slow_period": 21
+        }
+      },
+      "performance": {
+        "win_rate": 30.3,
+        "total_pnl": 356.92,
+        "total_trades": 33,
+        "winning_trades": 10,
+        "losing_trades": 23,
+        "avg_win": 99.91,
+        "avg_loss": -27.92,
+        "profit_factor": 1.56,
+        "max_drawdown_pct": 5.71,
+        "sharpe_ratio": 0.41,
+        "total_return_pct": 0.2
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 0.28,
+        "take_profit_pct": 1.0,
+        "max_daily_trades": 20,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "indicator": "EMA",
+          "condition": "crossover",
+          "params": {
+            "fast_period": 9,
+            "slow_period": 21
+          },
+          "signal": "buy",
+          "description": "EMA(9) crosses above EMA(21)"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "indicator": "EMA",
+          "condition": "crossunder",
+          "params": {
+            "fast_period": 9,
+            "slow_period": 21
+          },
+          "signal": "sell",
+          "description": "EMA(9) crosses below EMA(21)"
+        }
+      ],
+      "alternative_strategies": []
+    },
+    "LINK": {
+      "symbol": "LINKUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "multi",
+        "mode": "majority",
+        "strategies": [
+          {
+            "name": "rsi",
+            "params": {
+              "period": 14,
+              "oversold": 30,
+              "overbought": 70
+            }
+          },
+          {
+            "name": "macd",
+            "params": {
+              "fast_period": 12,
+              "slow_period": 26,
+              "signal_period": 9
+            }
+          }
+        ]
+      },
+      "performance": {
+        "win_rate": 100.0,
+        "total_pnl": 131.61,
+        "total_trades": 1,
+        "winning_trades": 1,
+        "losing_trades": 0,
+        "avg_win": 131.61,
+        "avg_loss": 0.0,
+        "profit_factor": 131.61,
+        "max_drawdown_pct": 5.94,
+        "sharpe_ratio": 1.51,
+        "total_return_pct": 1.32
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 2.0,
+        "take_profit_pct": 1.32,
+        "max_daily_trades": 1,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_above",
+              "params": {
+                "period": 14,
+                "level": 30
+              },
+              "signal": "buy",
+              "description": "RSI(14) crosses above 30"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "buy",
+              "description": "MACD line crosses above Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_below",
+              "params": {
+                "period": 14,
+                "level": 70
+              },
+              "signal": "sell",
+              "description": "RSI(14) crosses below 70"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "sell",
+              "description": "MACD line crosses below Signal line"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "alternative_strategies": [
+        {
+          "name": "RSI",
+          "win_rate": 71.43,
+          "pnl": 0.09,
+          "profit_factor": 1.0
+        }
+      ]
+    },
+    "DOT": {
+      "symbol": "DOTUSDT",
+      "enabled": true,
+      "strategy": {
+        "type": "multi",
+        "mode": "majority",
+        "strategies": [
+          {
+            "name": "rsi",
+            "params": {
+              "period": 14,
+              "oversold": 30,
+              "overbought": 70
+            }
+          },
+          {
+            "name": "macd",
+            "params": {
+              "fast_period": 12,
+              "slow_period": 26,
+              "signal_period": 9
+            }
+          },
+          {
+            "name": "bollinger",
+            "params": {
+              "period": 20,
+              "std_dev": 2
+            }
+          }
+        ]
+      },
+      "performance": {
+        "win_rate": 83.33,
+        "total_pnl": 1453.53,
+        "total_trades": 6,
+        "winning_trades": 5,
+        "losing_trades": 1,
+        "avg_win": 299.4,
+        "avg_loss": -43.48,
+        "profit_factor": 34.43,
+        "max_drawdown_pct": 3.86,
+        "sharpe_ratio": 13.25,
+        "total_return_pct": 14.0
+      },
+      "risk_management": {
+        "max_position_size": 0.1,
+        "stop_loss_pct": 0.43,
+        "take_profit_pct": 2.99,
+        "max_daily_trades": 6,
+        "max_drawdown_limit": 10.0
+      },
+      "entry_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_above",
+              "params": {
+                "period": 14,
+                "level": 30
+              },
+              "signal": "buy",
+              "description": "RSI(14) crosses above 30"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossover",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "buy",
+              "description": "MACD line crosses above Signal line"
+            },
+            {
+              "indicator": "Bollinger Bands",
+              "condition": "price_bounces_from_lower",
+              "params": {
+                "period": 20,
+                "std_dev": 2
+              },
+              "signal": "buy",
+              "description": "Price bounces from lower Bollinger Band"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "exit_conditions": [
+        {
+          "type": "multi_condition",
+          "mode": "majority",
+          "conditions": [
+            {
+              "indicator": "RSI",
+              "condition": "crosses_below",
+              "params": {
+                "period": 14,
+                "level": 70
+              },
+              "signal": "sell",
+              "description": "RSI(14) crosses below 70"
+            },
+            {
+              "indicator": "MACD",
+              "condition": "crossunder",
+              "params": {
+                "fast_period": 12,
+                "slow_period": 26,
+                "signal_period": 9
+              },
+              "signal": "sell",
+              "description": "MACD line crosses below Signal line"
+            },
+            {
+              "indicator": "Bollinger Bands",
+              "condition": "price_pulls_from_upper",
+              "params": {
+                "period": 20,
+                "std_dev": 2
+              },
+              "signal": "sell",
+              "description": "Price pulls back from upper Bollinger Band"
+            }
+          ],
+          "description": "All conditions combined with majority voting"
+        }
+      ],
+      "alternative_strategies": [
+        {
+          "name": "RSI",
+          "win_rate": 62.5,
+          "pnl": 323.0,
+          "profit_factor": 5.85
+        },
+        {
+          "name": "EMA Crossover",
+          "win_rate": 26.83,
+          "pnl": 261.54,
+          "profit_factor": 1.19
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_coins": 10,
+    "profitable_coins": 10,
+    "avg_win_rate": 70.53,
+    "total_pnl": 4258.5,
+    "single_strategy_count": 1,
+    "multi_strategy_count": 9
+  },
+  "recommendations": [
+    {
+      "type": "top_performers",
+      "title": "Highest Win Rate Coins",
+      "description": "Focus on these coins for consistent wins",
+      "coins": [
+        {
+          "coin": "ETH",
+          "win_rate": 100.0
+        },
+        {
+          "coin": "SOL",
+          "win_rate": 100.0
+        },
+        {
+          "coin": "LINK",
+          "win_rate": 100.0
+        }
+      ]
+    },
+    {
+      "type": "top_pnl",
+      "title": "Highest PnL Coins",
+      "description": "Focus on these coins for maximum profit",
+      "coins": [
+        {
+          "coin": "DOT",
+          "pnl": 1453.53
+        },
+        {
+          "coin": "ADA",
+          "pnl": 579.27
+        },
+        {
+          "coin": "BNB",
+          "pnl": 413.92
+        }
+      ]
+    },
+    {
+      "type": "multi_strategy",
+      "title": "Multi-Strategy Recommended",
+      "description": "These coins perform better with combined strategies",
+      "coins": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "XRP",
+        "DOGE",
+        "BNB",
+        "ADA",
+        "LINK",
+        "DOT"
+      ]
+    },
+    {
+      "type": "risk_warning",
+      "title": "High Drawdown Warning",
+      "description": "These coins have higher risk, use smaller position sizes",
+      "coins": [
+        {
+          "coin": "SOL",
+          "max_drawdown": 5.15
+        },
+        {
+          "coin": "AVAX",
+          "max_drawdown": 5.71
+        },
+        {
+          "coin": "LINK",
+          "max_drawdown": 5.94
+        }
+      ]
+    }
+  ]
+}

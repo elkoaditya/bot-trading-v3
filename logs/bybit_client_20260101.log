@@ -1,0 +1,16 @@
+2026-01-01 11:12:16 | INFO     | bybit_client | bybit_client.py:82 | Bybit client initialized for Demo environment
+2026-01-01 11:12:16 | ERROR    | bybit_client | bybit_client.py:542 | Health check failed: HTTPSConnectionPool(host='api-testnet.bybit.com', port=443): Max retries exceeded with url: /v5/market/time (Caused by NameResolutionError("HTTPSConnection(host='api-testnet.bybit.com', port=443): Failed to resolve 'api-testnet.bybit.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-01-01 11:14:27 | INFO     | bybit_client | bybit_client.py:82 | Bybit client initialized for Demo environment
+2026-01-01 11:15:23 | INFO     | bybit_client | bybit_client.py:82 | Bybit client initialized for Demo environment
+2026-01-01 11:17:36 | INFO     | bybit_client | bybit_client.py:82 | Bybit client initialized for Demo environment
+2026-01-01 11:17:52 | INFO     | bybit_client | bybit_client.py:302 | Placing order: Buy 5614.5 DOTUSDT @ Market
+2026-01-01 11:17:53 | INFO     | bybit_client | bybit_client.py:302 | Placing order: Buy 5614.5 DOTUSDT @ Market
+2026-01-01 11:17:55 | INFO     | bybit_client | bybit_client.py:302 | Placing order: Buy 5614.5 DOTUSDT @ Market
+2026-01-01 11:17:59 | INFO     | bybit_client | bybit_client.py:302 | Placing order: Buy 5614.5 DOTUSDT @ Market
+2026-01-01 11:19:22 | INFO     | bybit_client | bybit_client.py:97 | Bybit client initialized for Demo environment
+2026-01-01 11:20:05 | INFO     | bybit_client | bybit_client.py:97 | Bybit client initialized for Demo environment
+2026-01-01 11:22:00 | INFO     | bybit_client | bybit_client.py:97 | Bybit client initialized for Demo environment
+2026-01-01 11:23:39 | INFO     | bybit_client | bybit_client.py:97 | Bybit client initialized for Demo environment
+2026-01-01 11:23:48 | INFO     | bybit_client | bybit_client.py:317 | Placing order: Buy 30.3 DOTUSDT @ Market
+2026-01-01 11:23:48 | INFO     | bybit_client | bybit_client.py:322 | Order placed successfully: d5a8bd3d-e907-460e-8b6e-b2d09bdd22d9
+2026-01-01 11:25:36 | INFO     | bybit_client | bybit_client.py:97 | Bybit client initialized for Demo environment

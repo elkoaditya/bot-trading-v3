@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  trading-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trading-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Persist database
+      - ./data:/app/data
+      # Persist logs
+      - ./logs:/app/logs
+      # Persist config (optional, can also bake into image)
+      - ./config:/app/config
+    environment:
+      - TZ=Asia/Jakarta
+    # Uncomment below for interactive debugging
+    # stdin_open: true
+    # tty: true

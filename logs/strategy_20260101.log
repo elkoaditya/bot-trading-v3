@@ -1,0 +1,19 @@
+2026-01-01 11:14:36 | INFO     | strategy.macd | trend_following.py:162 | STRONG BUY signal: MACD bullish crossover above zero
+2026-01-01 11:14:36 | INFO     | strategy.bollinger | mean_reversion.py:212 | STRONG SELL signal: Price at upper Bollinger Band
+2026-01-01 11:17:44 | INFO     | strategy.macd | trend_following.py:170 | STRONG SELL signal: MACD bearish crossover below zero
+2026-01-01 11:17:44 | INFO     | strategy.bollinger | mean_reversion.py:202 | STRONG BUY signal: Price at lower Bollinger Band
+2026-01-01 11:17:44 | INFO     | strategy.macd | trend_following.py:170 | STRONG SELL signal: MACD bearish crossover below zero
+2026-01-01 11:17:45 | INFO     | strategy.macd | trend_following.py:162 | STRONG BUY signal: MACD bullish crossover above zero
+2026-01-01 11:17:45 | INFO     | strategy.macd | trend_following.py:162 | STRONG BUY signal: MACD bullish crossover above zero
+2026-01-01 11:20:13 | INFO     | strategy.bollinger | mean_reversion.py:202 | STRONG BUY signal: Price at lower Bollinger Band
+2026-01-01 11:20:13 | INFO     | strategy.bollinger | mean_reversion.py:197 | BUY signal: Price bounced from lower Bollinger Band
+2026-01-01 11:20:13 | INFO     | strategy.bollinger | mean_reversion.py:202 | STRONG BUY signal: Price at lower Bollinger Band
+2026-01-01 11:22:08 | INFO     | strategy.bollinger | mean_reversion.py:202 | STRONG BUY signal: Price at lower Bollinger Band
+2026-01-01 11:22:08 | INFO     | strategy.bollinger | mean_reversion.py:197 | BUY signal: Price bounced from lower Bollinger Band
+2026-01-01 11:22:08 | INFO     | strategy.bollinger | mean_reversion.py:202 | STRONG BUY signal: Price at lower Bollinger Band
+2026-01-01 11:23:40 | INFO     | strategy.bollinger | mean_reversion.py:202 | STRONG BUY signal: Price at lower Bollinger Band
+2026-01-01 11:23:40 | INFO     | strategy.bollinger | mean_reversion.py:197 | BUY signal: Price bounced from lower Bollinger Band
+2026-01-01 11:23:41 | INFO     | strategy.rsi | mean_reversion.py:63 | BUY signal: RSI(14) crossed above 30 (RSI=30.3)
+2026-01-01 11:23:41 | INFO     | strategy.bollinger | mean_reversion.py:197 | BUY signal: Price bounced from lower Bollinger Band
+2026-01-01 11:23:41 | INFO     | strategy.rsi | mean_reversion.py:63 | BUY signal: RSI(14) crossed above 30 (RSI=30.3)
+2026-01-01 11:23:41 | INFO     | strategy.bollinger | mean_reversion.py:197 | BUY signal: Price bounced from lower Bollinger Band

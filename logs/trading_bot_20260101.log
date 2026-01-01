@@ -1,0 +1,127 @@
+2026-01-01 11:12:16 | INFO     | trading_bot | main.py:63 | Initializing trading bot...
+2026-01-01 11:12:16 | INFO     | trading_bot | main.py:69 | Environment: Demo
+2026-01-01 11:12:16 | INFO     | trading_bot | main.py:70 | Enabled coins: ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'BNB', 'ADA', 'AVAX', 'LINK', 'DOT']
+2026-01-01 11:14:27 | INFO     | trading_bot | main.py:63 | Initializing trading bot...
+2026-01-01 11:14:27 | INFO     | trading_bot | main.py:69 | Environment: Demo
+2026-01-01 11:14:27 | INFO     | trading_bot | main.py:70 | Enabled coins: ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'BNB', 'ADA', 'AVAX', 'LINK', 'DOT']
+2026-01-01 11:14:27 | INFO     | trading_bot | main.py:83 | Bybit API connection successful
+2026-01-01 11:14:35 | ERROR    | trading_bot | main.py:166 | Failed to update balance: Http status code is not 200. (ErrCode: 401) (ErrTime: 04:14:35).
+Request → GET https://api-testnet.bybit.com/v5/account/wallet-balance: accountType=UNIFIED.
+2026-01-01 11:14:35 | INFO     | trading_bot | main.py:133 | Trading bot initialized successfully
+2026-01-01 11:14:35 | INFO     | trading_bot | main.py:182 | Trading bot started
+2026-01-01 11:14:35 | INFO     | trading_bot | main.py:200 | Starting main loop with 5m timeframe (300s interval)
+2026-01-01 11:14:36 | WARNING  | trading_bot | main.py:231 | No data for AVAXUSDT
+2026-01-01 11:14:43 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:43 | ERROR    | trading_bot | main.py:166 | Failed to update balance: Http status code is not 200. (ErrCode: 401) (ErrTime: 04:14:43).
+Request → GET https://api-testnet.bybit.com/v5/account/wallet-balance: accountType=UNIFIED.
+2026-01-01 11:14:43 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:44 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:44 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:44 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:44 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:45 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:45 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:45 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:45 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:45 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:45 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:45 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:46 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:46 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:46 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:46 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:46 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:46 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:46 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:14:46 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:15:11 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:15:11 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:15:11 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:15:11 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:15:12 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:15:23 | INFO     | trading_bot | main.py:63 | Initializing trading bot...
+2026-01-01 11:15:23 | INFO     | trading_bot | main.py:69 | Environment: Demo
+2026-01-01 11:15:23 | INFO     | trading_bot | main.py:70 | Enabled coins: ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'BNB', 'ADA', 'AVAX', 'LINK', 'DOT']
+2026-01-01 11:15:23 | INFO     | trading_bot | main.py:83 | Bybit API connection successful
+2026-01-01 11:15:25 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:15:25 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:15:25 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:17:36 | INFO     | trading_bot | main.py:63 | Initializing trading bot...
+2026-01-01 11:17:36 | INFO     | trading_bot | main.py:69 | Environment: Demo
+2026-01-01 11:17:36 | INFO     | trading_bot | main.py:70 | Enabled coins: ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'BNB', 'ADA', 'AVAX', 'LINK', 'DOT']
+2026-01-01 11:17:36 | INFO     | trading_bot | main.py:83 | Bybit API connection successful
+2026-01-01 11:17:44 | ERROR    | trading_bot | main.py:166 | Failed to update balance: Http status code is not 200. (ErrCode: 401) (ErrTime: 04:17:44).
+Request → GET https://api-testnet.bybit.com/v5/account/wallet-balance: accountType=UNIFIED.
+2026-01-01 11:17:44 | INFO     | trading_bot | main.py:133 | Trading bot initialized successfully
+2026-01-01 11:17:44 | INFO     | trading_bot | main.py:182 | Trading bot started
+2026-01-01 11:17:44 | INFO     | trading_bot | main.py:200 | Starting main loop with 5m timeframe (300s interval)
+2026-01-01 11:17:44 | WARNING  | trading_bot | main.py:231 | No data for AVAXUSDT
+2026-01-01 11:17:52 | INFO     | trading_bot | logger.py:122 | [DOTUSDT] Placing Market order: Buy 5614.5 @ market
+2026-01-01 11:17:59 | ERROR    | trading_bot | logger.py:128 | [DOTUSDT] Order failed: API key is invalid. (ErrCode: 10003) (ErrTime: 04:17:59).
+Request → POST https://api-testnet.bybit.com/v5/order/create: {"category": "linear", "symbol": "DOTUSDT", "side": "Buy", "orderType": "Market", "qty": "5614.5", "timeInForce": "GTC", "reduceOnly": false, "closeOnTrigger": false, "positionIdx": 0, "takeProfit": "1.8343", "stopLoss": "1.7734"}.
+2026-01-01 11:18:06 | ERROR    | trading_bot | main.py:166 | Failed to update balance: Http status code is not 200. (ErrCode: 401) (ErrTime: 04:18:06).
+Request → GET https://api-testnet.bybit.com/v5/account/wallet-balance: accountType=UNIFIED.
+2026-01-01 11:19:09 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:19:09 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:19:10 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:19:10 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:19:50 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:19:50 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:19:50 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:20:05 | INFO     | trading_bot | main.py:63 | Initializing trading bot...
+2026-01-01 11:20:05 | INFO     | trading_bot | main.py:69 | Environment: Demo
+2026-01-01 11:20:05 | INFO     | trading_bot | main.py:70 | Enabled coins: ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'BNB', 'ADA', 'AVAX', 'LINK', 'DOT']
+2026-01-01 11:20:05 | INFO     | trading_bot | main.py:83 | Bybit API connection successful
+2026-01-01 11:20:12 | ERROR    | trading_bot | main.py:166 | Failed to update balance: Http status code is not 200. (ErrCode: 401) (ErrTime: 04:20:12).
+Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountType=UNIFIED.
+2026-01-01 11:20:12 | INFO     | trading_bot | main.py:133 | Trading bot initialized successfully
+2026-01-01 11:20:13 | INFO     | trading_bot | main.py:182 | Trading bot started
+2026-01-01 11:20:13 | INFO     | trading_bot | main.py:200 | Starting main loop with 5m timeframe (300s interval)
+2026-01-01 11:20:20 | ERROR    | trading_bot | main.py:166 | Failed to update balance: Http status code is not 200. (ErrCode: 401) (ErrTime: 04:20:20).
+Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountType=UNIFIED.
+2026-01-01 11:20:29 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:20:29 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:20:29 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:22:00 | INFO     | trading_bot | main.py:63 | Initializing trading bot...
+2026-01-01 11:22:00 | INFO     | trading_bot | main.py:69 | Environment: Demo
+2026-01-01 11:22:00 | INFO     | trading_bot | main.py:70 | Enabled coins: ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'BNB', 'ADA', 'AVAX', 'LINK', 'DOT']
+2026-01-01 11:22:00 | INFO     | trading_bot | main.py:83 | Bybit API connection successful
+2026-01-01 11:22:07 | ERROR    | trading_bot | main.py:166 | Failed to update balance: Http status code is not 200. (ErrCode: 401) (ErrTime: 04:22:07).
+Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountType=UNIFIED.
+2026-01-01 11:22:07 | INFO     | trading_bot | main.py:133 | Trading bot initialized successfully
+2026-01-01 11:22:08 | INFO     | trading_bot | main.py:182 | Trading bot started
+2026-01-01 11:22:08 | INFO     | trading_bot | main.py:200 | Starting main loop with 5m timeframe (300s interval)
+2026-01-01 11:22:16 | ERROR    | trading_bot | main.py:166 | Failed to update balance: Http status code is not 200. (ErrCode: 401) (ErrTime: 04:22:16).
+Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountType=UNIFIED.
+2026-01-01 11:22:39 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:22:39 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:22:40 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:23:39 | INFO     | trading_bot | main.py:63 | Initializing trading bot...
+2026-01-01 11:23:39 | INFO     | trading_bot | main.py:69 | Environment: Demo
+2026-01-01 11:23:39 | INFO     | trading_bot | main.py:70 | Enabled coins: ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'BNB', 'ADA', 'AVAX', 'LINK', 'DOT']
+2026-01-01 11:23:39 | INFO     | trading_bot | main.py:83 | Bybit API connection successful
+2026-01-01 11:23:40 | INFO     | trading_bot | main.py:163 | Updated balance: $53.61
+2026-01-01 11:23:40 | INFO     | trading_bot | main.py:133 | Trading bot initialized successfully
+2026-01-01 11:23:40 | INFO     | trading_bot | main.py:182 | Trading bot started
+2026-01-01 11:23:40 | INFO     | trading_bot | main.py:200 | Starting main loop with 5m timeframe (300s interval)
+2026-01-01 11:23:48 | INFO     | trading_bot | logger.py:122 | [DOTUSDT] Placing Market order: Buy 30.3 @ market
+2026-01-01 11:23:48 | INFO     | trading_bot | logger.py:122 | [DOTUSDT] TRADE PLACED | Side: Buy | Price: 0.00000000 | Qty: 30.30000000
+2026-01-01 11:23:48 | INFO     | trading_bot | main.py:374 | Opened long position for DOTUSDT: 30.315385223095635 @ 1.7683
+2026-01-01 11:23:49 | INFO     | trading_bot | main.py:163 | Updated balance: $53.57
+2026-01-01 11:25:13 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:25:14 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:25:14 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:25:14 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:25:27 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:25:27 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:25:27 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:25:36 | INFO     | trading_bot | main.py:63 | Initializing trading bot...
+2026-01-01 11:25:36 | INFO     | trading_bot | main.py:69 | Environment: Demo
+2026-01-01 11:25:36 | INFO     | trading_bot | main.py:70 | Enabled coins: ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'BNB', 'ADA', 'AVAX', 'LINK', 'DOT']
+2026-01-01 11:25:36 | INFO     | trading_bot | main.py:83 | Bybit API connection successful
+2026-01-01 11:25:36 | INFO     | trading_bot | main.py:152 | Loaded 1 open positions from database
+2026-01-01 11:25:36 | INFO     | trading_bot | main.py:163 | Updated balance: $53.59
+2026-01-01 11:25:36 | INFO     | trading_bot | main.py:133 | Trading bot initialized successfully
+2026-01-01 11:25:37 | INFO     | trading_bot | main.py:182 | Trading bot started
+2026-01-01 11:25:37 | INFO     | trading_bot | main.py:200 | Starting main loop with 5m timeframe (300s interval)
+2026-01-01 11:25:37 | INFO     | trading_bot | main.py:163 | Updated balance: $53.59

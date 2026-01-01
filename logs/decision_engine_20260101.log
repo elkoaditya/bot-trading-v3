@@ -1,0 +1,77 @@
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BTC: 2 strategies, mode=majority
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ETH: 2 strategies, mode=majority
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:138 | Created decider for SOL: 3 strategies, mode=majority
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:138 | Created decider for XRP: 2 strategies, mode=majority
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOGE: 3 strategies, mode=majority
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BNB: 3 strategies, mode=majority
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ADA: 2 strategies, mode=majority
+2026-01-01 11:14:27 | WARNING  | decision_engine | decision_engine.py:128 | No valid strategies for AVAX
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:138 | Created decider for LINK: 2 strategies, mode=majority
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOT: 3 strategies, mode=majority
+2026-01-01 11:14:27 | INFO     | decision_engine | decision_engine.py:116 | Decision engine initialized with 10 coins
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BTC: 2 strategies, mode=majority
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ETH: 2 strategies, mode=majority
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:138 | Created decider for SOL: 3 strategies, mode=majority
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:138 | Created decider for XRP: 2 strategies, mode=majority
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOGE: 3 strategies, mode=majority
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BNB: 3 strategies, mode=majority
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ADA: 2 strategies, mode=majority
+2026-01-01 11:15:23 | WARNING  | decision_engine | decision_engine.py:128 | No valid strategies for AVAX
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:138 | Created decider for LINK: 2 strategies, mode=majority
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOT: 3 strategies, mode=majority
+2026-01-01 11:15:23 | INFO     | decision_engine | decision_engine.py:116 | Decision engine initialized with 10 coins
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BTC: 2 strategies, mode=majority
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ETH: 2 strategies, mode=majority
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for SOL: 3 strategies, mode=majority
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for XRP: 2 strategies, mode=majority
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOGE: 3 strategies, mode=majority
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BNB: 3 strategies, mode=majority
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ADA: 2 strategies, mode=majority
+2026-01-01 11:17:36 | WARNING  | decision_engine | decision_engine.py:128 | No valid strategies for AVAX
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for LINK: 2 strategies, mode=majority
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOT: 3 strategies, mode=majority
+2026-01-01 11:17:36 | INFO     | decision_engine | decision_engine.py:116 | Decision engine initialized with 10 coins
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BTC: 2 strategies, mode=majority
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ETH: 2 strategies, mode=majority
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:138 | Created decider for SOL: 3 strategies, mode=majority
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:138 | Created decider for XRP: 2 strategies, mode=majority
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOGE: 3 strategies, mode=majority
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BNB: 3 strategies, mode=majority
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ADA: 2 strategies, mode=majority
+2026-01-01 11:20:05 | WARNING  | decision_engine | decision_engine.py:128 | No valid strategies for AVAX
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:138 | Created decider for LINK: 2 strategies, mode=majority
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOT: 3 strategies, mode=majority
+2026-01-01 11:20:05 | INFO     | decision_engine | decision_engine.py:116 | Decision engine initialized with 10 coins
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BTC: 2 strategies, mode=majority
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ETH: 2 strategies, mode=majority
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:138 | Created decider for SOL: 3 strategies, mode=majority
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:138 | Created decider for XRP: 2 strategies, mode=majority
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOGE: 3 strategies, mode=majority
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BNB: 3 strategies, mode=majority
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ADA: 2 strategies, mode=majority
+2026-01-01 11:22:00 | WARNING  | decision_engine | decision_engine.py:128 | No valid strategies for AVAX
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:138 | Created decider for LINK: 2 strategies, mode=majority
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOT: 3 strategies, mode=majority
+2026-01-01 11:22:00 | INFO     | decision_engine | decision_engine.py:116 | Decision engine initialized with 10 coins
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BTC: 2 strategies, mode=majority
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ETH: 2 strategies, mode=majority
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:138 | Created decider for SOL: 3 strategies, mode=majority
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:138 | Created decider for XRP: 2 strategies, mode=majority
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOGE: 3 strategies, mode=majority
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BNB: 3 strategies, mode=majority
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ADA: 2 strategies, mode=majority
+2026-01-01 11:23:39 | WARNING  | decision_engine | decision_engine.py:128 | No valid strategies for AVAX
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:138 | Created decider for LINK: 2 strategies, mode=majority
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOT: 3 strategies, mode=majority
+2026-01-01 11:23:39 | INFO     | decision_engine | decision_engine.py:116 | Decision engine initialized with 10 coins
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BTC: 2 strategies, mode=majority
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ETH: 2 strategies, mode=majority
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for SOL: 3 strategies, mode=majority
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for XRP: 2 strategies, mode=majority
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOGE: 3 strategies, mode=majority
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for BNB: 3 strategies, mode=majority
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for ADA: 2 strategies, mode=majority
+2026-01-01 11:25:36 | WARNING  | decision_engine | decision_engine.py:128 | No valid strategies for AVAX
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for LINK: 2 strategies, mode=majority
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:138 | Created decider for DOT: 3 strategies, mode=majority
+2026-01-01 11:25:36 | INFO     | decision_engine | decision_engine.py:116 | Decision engine initialized with 10 coins

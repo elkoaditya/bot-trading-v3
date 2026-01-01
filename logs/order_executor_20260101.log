@@ -1,0 +1,9 @@
+2026-01-01 11:14:27 | INFO     | order_executor | order_executor.py:196 | Order executor initialized
+2026-01-01 11:15:23 | INFO     | order_executor | order_executor.py:196 | Order executor initialized
+2026-01-01 11:17:36 | INFO     | order_executor | order_executor.py:196 | Order executor initialized
+2026-01-01 11:17:52 | WARNING  | order_executor | order_executor.py:527 | Could not set leverage for DOTUSDT: API key is invalid. (ErrCode: 10003) (ErrTime: 04:17:52).
+Request → POST https://api-testnet.bybit.com/v5/position/set-leverage: {"category": "linear", "symbol": "DOTUSDT", "buyLeverage": "10", "sellLeverage": "10"}.
+2026-01-01 11:20:05 | INFO     | order_executor | order_executor.py:196 | Order executor initialized
+2026-01-01 11:22:00 | INFO     | order_executor | order_executor.py:196 | Order executor initialized
+2026-01-01 11:23:39 | INFO     | order_executor | order_executor.py:196 | Order executor initialized
+2026-01-01 11:25:36 | INFO     | order_executor | order_executor.py:196 | Order executor initialized

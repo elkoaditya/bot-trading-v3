@@ -1,0 +1,13 @@
+2026-01-01 11:14:28 | INFO     | telegram | telegram_notifier.py:42 | Telegram notifier initialized
+2026-01-01 11:14:35 | ERROR    | telegram | telegram_notifier.py:70 | Failed to send Telegram message: Not Found
+2026-01-01 11:15:24 | INFO     | telegram | telegram_notifier.py:42 | Telegram notifier initialized
+2026-01-01 11:17:36 | INFO     | telegram | telegram_notifier.py:42 | Telegram notifier initialized
+2026-01-01 11:17:44 | ERROR    | telegram | telegram_notifier.py:70 | Failed to send Telegram message: Not Found
+2026-01-01 11:20:05 | INFO     | telegram | telegram_notifier.py:42 | Telegram notifier initialized
+2026-01-01 11:20:13 | ERROR    | telegram | telegram_notifier.py:70 | Failed to send Telegram message: Not Found
+2026-01-01 11:22:00 | INFO     | telegram | telegram_notifier.py:42 | Telegram notifier initialized
+2026-01-01 11:22:08 | ERROR    | telegram | telegram_notifier.py:70 | Failed to send Telegram message: Not Found
+2026-01-01 11:23:40 | INFO     | telegram | telegram_notifier.py:42 | Telegram notifier initialized
+2026-01-01 11:23:40 | ERROR    | telegram | telegram_notifier.py:70 | Failed to send Telegram message: Not Found
+2026-01-01 11:23:48 | ERROR    | telegram | telegram_notifier.py:70 | Failed to send Telegram message: Not Found
+2026-01-01 11:25:36 | INFO     | telegram | telegram_notifier.py:42 | Telegram notifier initialized

@@ -1,0 +1,5 @@
+2026-01-01 11:14:36 | INFO     | strategy.macd | trend_following.py:162 | STRONG BUY signal: MACD bullish crossover above zero
+2026-01-01 11:17:44 | INFO     | strategy.macd | trend_following.py:170 | STRONG SELL signal: MACD bearish crossover below zero
+2026-01-01 11:17:44 | INFO     | strategy.macd | trend_following.py:170 | STRONG SELL signal: MACD bearish crossover below zero
+2026-01-01 11:17:45 | INFO     | strategy.macd | trend_following.py:162 | STRONG BUY signal: MACD bullish crossover above zero
+2026-01-01 11:17:45 | INFO     | strategy.macd | trend_following.py:162 | STRONG BUY signal: MACD bullish crossover above zero
