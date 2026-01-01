@@ -125,3 +125,20 @@ Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountTyp
 2026-01-01 11:25:37 | INFO     | trading_bot | main.py:182 | Trading bot started
 2026-01-01 11:25:37 | INFO     | trading_bot | main.py:200 | Starting main loop with 5m timeframe (300s interval)
 2026-01-01 11:25:37 | INFO     | trading_bot | main.py:163 | Updated balance: $53.59
+2026-01-01 11:30:45 | WARNING  | trading_bot | main.py:231 | No data for BTCUSDT
+2026-01-01 11:30:52 | WARNING  | trading_bot | main.py:231 | No data for ETHUSDT
+2026-01-01 11:30:59 | WARNING  | trading_bot | main.py:231 | No data for SOLUSDT
+2026-01-01 11:31:06 | WARNING  | trading_bot | main.py:231 | No data for XRPUSDT
+2026-01-01 11:31:13 | WARNING  | trading_bot | main.py:231 | No data for DOGEUSDT
+2026-01-01 11:31:21 | WARNING  | trading_bot | main.py:231 | No data for BNBUSDT
+2026-01-01 11:31:28 | WARNING  | trading_bot | main.py:231 | No data for ADAUSDT
+2026-01-01 11:31:35 | WARNING  | trading_bot | main.py:231 | No data for AVAXUSDT
+2026-01-01 11:31:42 | WARNING  | trading_bot | main.py:231 | No data for LINKUSDT
+2026-01-01 11:31:50 | WARNING  | trading_bot | main.py:231 | No data for DOTUSDT
+2026-01-01 11:31:58 | ERROR    | trading_bot | main.py:166 | Failed to update balance: HTTPSConnectionPool(host='api-demo.bybit.com', port=443): Max retries exceeded with url: /v5/account/wallet-balance?accountType=UNIFIED (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'api-demo.bybit.com'. (_ssl.c:1077)")))
+2026-01-01 11:35:49 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:35:49 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:35:49 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:35:50 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:35:50 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2
+2026-01-01 11:35:50 | INFO     | trading_bot | main.py:457 | Received shutdown signal 2

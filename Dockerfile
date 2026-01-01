@@ -1,6 +1,6 @@
 # Trading Bot Dockerfile
-# Python 3.11 slim image for smaller size
-FROM python:3.11-slim
+# Python 3.10 slim image (pandas-ta requires Python <3.11)
+FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
