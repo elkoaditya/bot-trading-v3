@@ -8,8 +8,9 @@ pybit>=5.6.0
 pandas>=2.0.0
 numpy>=1.24.0
 
-# Technical Indicators (installed from GitHub - no longer on PyPI)
-git+https://github.com/twopirllc/pandas-ta.git
+# Technical Indicators
+# Using 'ta' library as alternative (pandas-ta is no longer on PyPI)
+ta>=0.10.0
 
 # Configuration
 pyyaml>=6.0
