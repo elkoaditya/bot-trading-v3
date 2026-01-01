@@ -19,6 +19,7 @@ python-dotenv>=1.0.0
 # Async Support
 aiohttp>=3.8.0
 aiosqlite>=0.17.0
+websockets>=10.0
 
 # Notifications
 python-telegram-bot>=20.0
