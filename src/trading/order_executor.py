@@ -3,7 +3,7 @@ Order Executor for placing and managing orders.
 Handles order placement, validation, and tracking.
 """
 import asyncio
-from typing import Optional, Dict, List, Any
+from typing import Optional, Dict, List, Any, Tuple
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
@@ -551,6 +551,3 @@ class OrderExecutor:
                 self._pending_orders.pop(order_id, None)
                 self._completed_orders.append(updated_order)
 
-
-# Add missing import
-from typing import Tuple
