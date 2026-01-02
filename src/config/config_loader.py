@@ -61,6 +61,8 @@ class GlobalSettings:
     timeframe: str = "5m"
     category: str = "linear"
     exchange: str = "bybit"
+    pnl_position_pct: float = 0.18  # 18% of PnL for position sizing
+    use_pnl_sizing: bool = True     # Enable PnL-based sizing
 
 
 @dataclass
@@ -141,7 +143,9 @@ class ConfigLoader:
             leverage=global_data.get('leverage', 10),
             timeframe=global_data.get('timeframe', '5m'),
             category=global_data.get('category', 'linear'),
-            exchange=global_data.get('exchange', 'bybit')
+            exchange=global_data.get('exchange', 'bybit'),
+            pnl_position_pct=global_data.get('pnl_position_pct', 0.18),
+            use_pnl_sizing=global_data.get('use_pnl_sizing', True)
         )
         
         # Parse coins

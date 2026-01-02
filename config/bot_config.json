@@ -11,7 +11,9 @@
     "leverage": 10,
     "timeframe": "5m",
     "category": "linear",
-    "exchange": "bybit"
+    "exchange": "bybit",
+    "pnl_position_pct": 0.18,
+    "use_pnl_sizing": true
   },
   "coins": {
     "BTC": {

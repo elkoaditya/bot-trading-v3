@@ -1,0 +1,6 @@
+2026-01-02 09:49:43 | INFO     | risk_manager | risk_manager.py:94 | Risk manager initialized (balance will be fetched from exchange)
+2026-01-02 09:49:43 | INFO     | risk_manager | risk_manager.py:362 | Initial balance set from exchange: $1,000.00
+2026-01-02 09:49:43 | INFO     | risk_manager | risk_manager.py:501 | PnL-based sizing fallback: PnL=$0.00 (no profits), Using 10% of balance = $100.00
+2026-01-02 09:49:43 | INFO     | risk_manager | risk_manager.py:512 | Position size calculated: $100.00 x 10x / $100.00 = 10.000000
+2026-01-02 09:49:43 | INFO     | risk_manager | risk_manager.py:494 | PnL-based sizing: Total PnL=$800.00, Using 18% = $144.00
+2026-01-02 09:49:43 | INFO     | risk_manager | risk_manager.py:512 | Position size calculated: $144.00 x 10x / $100.00 = 14.400000

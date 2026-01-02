@@ -459,3 +459,60 @@ class RiskManager:
             if position.stop_loss is None or new_stop < position.stop_loss:
                 position.stop_loss = new_stop
                 logger.info(f"Trailing stop updated for {symbol}: {new_stop:.2f}")
+    
+    def get_total_pnl(self) -> float:
+        """Get total realized PnL from all closed trades."""
+        return sum(t['pnl'] for t in self._trade_history)
+    
+    def calculate_pnl_based_position_size(
+        self,
+        entry_price: float,
+        pnl_percentage: float = 0.18,
+        leverage: int = 10,
+        fallback_balance_pct: float = 0.1
+    ) -> float:
+        """
+        Calculate position size based on realized PnL.
+        
+        Uses 18% (or configured percentage) of realized profits for position sizing.
+        If PnL is zero or negative, falls back to using a percentage of current balance.
+        
+        Args:
+            entry_price: Entry price for the trade
+            pnl_percentage: Percentage of PnL to use (default 18%)
+            leverage: Trading leverage
+            fallback_balance_pct: Fallback percentage of balance if no profits
+            
+        Returns:
+            Position size in base currency
+        """
+        total_pnl = self.get_total_pnl()
+        
+        if total_pnl > 0:
+            # Use configured percentage of realized profits
+            position_value = total_pnl * pnl_percentage
+            logger.info(
+                f"PnL-based sizing: Total PnL=${total_pnl:.2f}, "
+                f"Using {pnl_percentage*100:.0f}% = ${position_value:.2f}"
+            )
+        else:
+            # Fallback: use percentage of current balance
+            position_value = self._current_balance * fallback_balance_pct
+            logger.info(
+                f"PnL-based sizing fallback: PnL=${total_pnl:.2f} (no profits), "
+                f"Using {fallback_balance_pct*100:.0f}% of balance = ${position_value:.2f}"
+            )
+        
+        if position_value <= 0 or entry_price <= 0:
+            return 0.0
+        
+        # Calculate quantity with leverage
+        quantity = (position_value * leverage) / entry_price
+        
+        logger.info(
+            f"Position size calculated: ${position_value:.2f} x {leverage}x / "
+            f"${entry_price:.2f} = {quantity:.6f}"
+        )
+        
+        return quantity
+

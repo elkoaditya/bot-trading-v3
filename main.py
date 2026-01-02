@@ -313,10 +313,19 @@ class TradingBot:
                 side=side
             )
         else:
-            # Default position size
-            balance = self.risk_manager.get_balance()
-            position_pct = self.config.global_settings.position_size
-            quantity = (balance * position_pct * self.config.global_settings.leverage) / price
+            # PnL-based position sizing or fallback to static sizing
+            if getattr(self.config.global_settings, 'use_pnl_sizing', True):
+                quantity = self.risk_manager.calculate_pnl_based_position_size(
+                    entry_price=price,
+                    pnl_percentage=getattr(self.config.global_settings, 'pnl_position_pct', 0.18),
+                    leverage=self.config.global_settings.leverage,
+                    fallback_balance_pct=self.config.global_settings.position_size
+                )
+            else:
+                # Static position size (old behavior)
+                balance = self.risk_manager.get_balance()
+                position_pct = self.config.global_settings.position_size
+                quantity = (balance * position_pct * self.config.global_settings.leverage) / price
         
         if quantity <= 0:
             logger.warning(f"Invalid quantity for {symbol}")
