@@ -18,7 +18,7 @@ from src.core.data_fetcher import DataFetcher
 from src.core.websocket_manager import WebSocketManager, KlineAggregator
 from src.strategies.base_strategy import Signal
 from src.trading.decision_engine import DecisionEngine, TradeAction
-from src.trading.order_executor import OrderExecutor, OrderSide
+from src.trading.order_executor import OrderExecutor, OrderSide, OrderStatus
 from src.trading.risk_manager import RiskManager, PositionInfo
 from src.database.models import Database, Trade, Position
 from src.notifications.telegram_notifier import TelegramNotifier
@@ -394,6 +394,14 @@ class TradingBot:
             side=position.side,
             quantity=position.quantity
         )
+        
+        # Check if close was skipped due to no exchange position
+        if order.status == OrderStatus.CANCELLED and order.error_message and "No position on exchange" in order.error_message:
+            logger.warning(f"Position sync issue for {symbol}: local position exists but not on exchange. Cleaning up local state.")
+            # Clean up local state without recording PnL (position was already closed)
+            self.risk_manager.positions.pop(symbol, None)
+            await self.database.close_position(symbol)
+            return
         
         # Record trade
         trade_result = self.risk_manager.close_position(symbol, exit_price, reason)

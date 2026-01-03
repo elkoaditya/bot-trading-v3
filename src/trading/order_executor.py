@@ -356,6 +356,28 @@ class OrderExecutor:
         
         return await self.execute_order(order)
     
+    async def verify_exchange_position(self, symbol: str) -> Optional[Dict]:
+        """
+        Verify if a position actually exists on the exchange.
+        
+        Args:
+            symbol: Trading symbol
+            
+        Returns:
+            Position data if exists, None otherwise
+        """
+        try:
+            positions = self.client.get_positions(category=self.category, symbol=symbol)
+            for pos in positions:
+                # Check if position has actual quantity
+                size = float(pos.get('size', 0))
+                if size > 0:
+                    return pos
+            return None
+        except Exception as e:
+            logger.error(f"Error verifying exchange position for {symbol}: {e}")
+            return None
+
     async def close_position(
         self,
         symbol: str,
@@ -373,13 +395,30 @@ class OrderExecutor:
         Returns:
             Executed order
         """
+        # Verify position exists on exchange first
+        exchange_pos = await self.verify_exchange_position(symbol)
+        if not exchange_pos:
+            logger.warning(f"No position found on exchange for {symbol}, skipping close")
+            # Return a dummy order indicating no action needed
+            return Order(
+                symbol=symbol,
+                side=OrderSide.SELL if side == 'long' else OrderSide.BUY,
+                order_type=OrderType.MARKET,
+                quantity=0,
+                status=OrderStatus.CANCELLED,
+                error_message="No position on exchange to close"
+            )
+        
+        # Use actual exchange quantity to avoid qty mismatch
+        actual_qty = float(exchange_pos.get('size', quantity))
+        
         # Opposite side to close
         order_side = OrderSide.SELL if side == 'long' else OrderSide.BUY
         
         return await self.execute_market_order(
             symbol=symbol,
             side=order_side,
-            quantity=quantity,
+            quantity=actual_qty,
             reduce_only=True
         )
     
